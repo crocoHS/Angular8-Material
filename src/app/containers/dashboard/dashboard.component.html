@@ -1,0 +1,33 @@
+<div class="container-fluid p-4">
+  <h4 class="d-flex align-items-center">
+    <mat-icon class="mr-2">location_city</mat-icon>
+    <span>Customer Intelligence</span>
+  </h4>
+
+  <div class="row">
+    <div class="col-md-4 col-sm-12 my-3">
+      <p class="d-flex align-items-center"><mat-icon color="accent" class="mr-2">info</mat-icon> <span>Last Transaction Date</span></p>
+      <mat-card>
+        <mat-card-content>
+          <app-pie-chart id="chart1" [data]="pieData"></app-pie-chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12 my-3">
+      <p class="d-flex align-items-center"><mat-icon color="accent" class="mr-2">info</mat-icon> <span>Number of Transactions</span></p>
+      <mat-card>
+        <mat-card-content>
+          <app-bar-chart id="chart2" [data]="barData1" max="16000" bottomText="Transactions" leftText="Customers"></app-bar-chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12 my-3">
+      <p class="d-flex align-items-center"><mat-icon color="accent" class="mr-2">info</mat-icon> <span>Dollar Amount Per Customer</span></p>
+      <mat-card>
+        <mat-card-content>
+          <app-bar-chart id="chart3" [data]="barData2" max="10000" bottomText="Sales" leftText="Customers"></app-bar-chart>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

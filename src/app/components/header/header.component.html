@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-between fixed-top">
+  <a class="navbar-brand" href="/">
+   <img src="assets/image/logo.png" alt="Logo" width="30">
+   <span>buyer</span>
+   <strong>genomics</strong>
+  </a>
+  <div>
+    <button mat-button [matMenuTriggerFor]="storeMenu" class="btn-menu">
+      <span>Katana Store</span>
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #storeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Store 1</button>
+      <button mat-menu-item>Store 2</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="profileMenu" class="btn-menu">
+      <img  src="assets/image/avatar.png" width="30" alt="avatar" class="rounded-circle">
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #profileMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </div>
+</nav>
